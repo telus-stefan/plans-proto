@@ -1,0 +1,15 @@
+<input id="a1" type="button" value="10" /> Data </div>
+<input id="a1" type="button" value="20" /> Data </div>
+<input id="a2" type="text" onblur="calculate()"  />
+<input id="a3" type="text" name="total_amt" />
+
+<script type="text/javascript">
+
+
+calculate = function()
+{
+    var resources = document.getElementById('a1').value;
+    var minutes = document.getElementById('a2').value;
+    document.getElementById('a3').value = parseInt(resources)*parseInt(minutes);
+
+   }</script>
