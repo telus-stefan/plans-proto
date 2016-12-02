@@ -1,0 +1,178 @@
+@charset 'utf-8';
+
+$norm-grey: #666;
+$dark-grey: #333;
+$lt-gray: #f5f6f7;
+
+
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@include foundation-global-styles;
+@include foundation-grid;
+// @include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+// @include foundation-progress-element;
+// @include foundation-meter-element;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+// @include foundation-flex-classes;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+@mixin spacer {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  @include breakpoint(large up) {
+    margin-bottom: 60px;
+  }
+}
+
+
+// PAGE STYLES
+
+.nav{
+
+}
+
+.page-header{
+  @include spacer;
+}
+
+.data-plan{
+  @include spacer;
+  h6{
+    font-weight: 400;
+    margin-bottom: 0px;
+  }
+}
+
+.voice-plan{
+  @include spacer;
+  background: $white;
+}
+
+.vpsmall{
+
+  margin: 0 -15px -20px -15px !important;
+  padding: 5%;
+}
+
+.other-plan{
+  @include spacer;
+}
+
+a, a:link, a:focus{
+  color: $dark-grey;
+  font-weight: 400;
+}
+
+
+.accordion-title{
+  display: block;
+  padding: 1.25rem 1rem;
+  line-height: 1;
+  font-size: 17px;
+  color: $dark-grey;
+  position: relative;
+  border: none;
+  border-bottom: 0;
+}
+:last-child:not(.is-active)>.accordion-title{
+  border-bottom: none;
+  background-color:  transparent;
+}
+
+.accordion-title:hover, .accordion-title:focus{
+  border-bottom: none;
+  background-color:  transparent;
+}
+
+.accordion-content {
+    padding: 1rem;
+    display: none;
+    border: none;
+    border-bottom: 0;
+    background-color: $lt-gray;
+    color: $norm-grey;
+}
+
+
+// BYOD PLANS STYLES //
+
+.recco{
+
+@include spacer;
+
+  h6{
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: $norm-grey;
+  }
+
+  h3{
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+}
+  .price{
+    font-size: 48px;
+  }
+
+  .details{
+    h6{
+      font-size: 14px;
+      margin-bottom: 0px;
+      font-weight: 400;
+      @include breakpoint(medium up) {
+        font-size: 17px;
+      }
+    }
+
+    p{
+      margin-bottom: 0rem;
+    }
+
+  }
+
+
+
+.side{
+  padding: 2%;
+  background: #f5f6f7;
+}
